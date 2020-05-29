@@ -1,0 +1,304 @@
+@import url(https://fonts.googleapis.com/css?family=Lato:100,100italic,300,300italic,regular,italic,700,700italic,900,900italic);
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lato', serif;
+}
+
+body {
+    position: relative;
+}
+
+.phone {
+    display: flex;
+    justify-content: space-between;
+    background: #182143;
+    height: 50px;
+    padding: 0 100px;
+}
+
+.contactHeader {
+    display: flex;
+    line-height: 50px;
+    color: white;
+    font-size: 15px;
+}
+
+.contactHeader span {
+    padding: 0 30px;
+    color: #303856;
+}
+
+.contactHeader .fas {
+    color: #88c417;
+    padding-right: 10px;
+}
+
+.language {
+    position: relative;
+    background-color: #88c417;
+    width: 160px;
+    height: 50px;
+}
+
+.languageHover {
+    display: flex;
+    position: relative;
+}
+
+.languageHover img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
+.contentRight {
+    position: absolute;
+    display: flex;
+    color: white;
+    text-transform: uppercase;
+    right: 20px;
+    top: 15px;
+}
+
+.contentRight i {
+    padding-left: 5px;
+}
+
+.languageList {
+    position: absolute;
+    list-style-type: none;
+    background-color: white;
+    right: 5px;
+    padding: 10px 15px;
+    transform: translateY(-50px);
+    transition: all 0.3s;
+    opacity: 0;
+}
+
+.languageList a {
+    text-decoration: none;
+    color: black;
+}
+
+.language :hover {
+    cursor: pointer;
+}
+
+.languageHover:hover .languageList {
+    transform: translateY(40px);
+    opacity: 1;
+}
+
+.header {
+    padding: 40px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header__navigation {
+    padding: 20px 0;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 50px;
+}
+
+.nav-list {
+    position: relative;
+    list-style: none;
+    display: flex;
+}
+
+.nav-list li {
+    margin: 0 30px;
+}
+
+.nav-list li a.item,
+a.item-active {
+    text-decoration: none;
+    color: #323232;
+    font-weight: bolder;
+    font-size: 20px;
+    padding: 5px 0px;
+}
+
+a.item-active {
+    border-bottom: 2px solid #88c417;
+}
+
+a.item {
+    position: relative;
+}
+
+a.item::after {
+    content: ' ';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0%;
+    border-bottom: 2px solid #88c417;
+    opacity: 0;
+    transition: all 0.5s;
+}
+
+a.item:hover::after {
+    opacity: 1;
+    width: 100%;
+}
+
+.list-child {
+    position: absolute;
+    top: 30px;
+    list-style: none;
+    width: 220px;
+    right: 25px;
+    transform: translateY(20px);
+    visibility: hidden;
+    opacity: 1;
+    transition: all 0.5s;
+}
+
+.list-child li {
+    background-color: #4A4A4A;
+    padding: 20px;
+}
+
+.item-child {
+    text-decoration: none;
+    color: white;
+}
+
+.nav-list li:hover .list-child {
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.search i {
+    cursor: pointer;
+}
+
+.find {
+    background: url(img/hero-bg.jpg);
+    height: 100vh;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.content {
+    height: 70%;
+    width: 80%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 250px;
+    grid-gap: 100px;
+}
+
+.content__find {
+    height: 100%;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.content__find h1 {
+    text-transform: capitalize;
+    font-size: 50px;
+    width: 400px;
+    padding-top: 30px;
+}
+
+.content__find p {
+    line-height: 200px;
+}
+
+.button a {
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+    border: 1px solid transparent;
+    padding: 15px 40px;
+    font-weight: bold;
+}
+
+.button__1 {
+    margin-right: 15px;
+    background-color: #88c417;
+}
+
+.button__2 {
+    background-color: #223060;
+}
+
+.content__form {
+    height: 100%;
+    background-color: white;
+    text-align: center;
+    width: 90%;
+}
+
+.row {
+    height: 100%;
+    padding: 30px 40px;
+}
+
+.content__form h3 {
+    font-size: 30px;
+    line-height: 60px;
+}
+
+.row__1,
+.row__2,
+.row__3 {
+    display: flex;
+    text-align: left;
+}
+
+.row__1,
+.row__3 {
+    justify-content: space-between;
+}
+
+.row__2 {
+    text-align: left;
+}
+
+.money,
+.day,
+.name,
+.phoneInput,
+.row__2 {
+    display: flex;
+    flex-direction: column;
+}
+
+.row label {
+    line-height: 50px;
+}
+
+.row input {
+    height: 40px;
+    border: 1px solid transparent;
+    background: #F6F6F6;
+}
+
+.row a {
+    line-height: 100px;
+    text-decoration: none;
+    color: whitesmoke;
+    text-transform: uppercase;
+    background-color: #88c417;
+    padding: 15px 80px;
+}
